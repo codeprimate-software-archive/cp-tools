@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.8.1
+Created-By: 1.6.0_20-b02 (Sun Microsystems Inc.)
+Built-By: cp Ant build and deployment management system (BDMS)
+Main-Class: 
+Class-Path: lib/commons-beanutils-1.8.3.jar lib/commons-collections-3.
+ 2.1.jar lib/commons-logging-1.1.1.jar lib/cp-common.jar lib/dom4j-1.6
+ .1.jar lib/log4j-1.2.16.jar lib/poi-3.7.jar lib/servlet.jar lib/sprin
+ g-aop-3.0.3.jar lib/spring-beans-3.0.3.jar lib/spring-context-3.0.3.j
+ ar lib/spring-context-support-3.0.3.jar lib/spring-core-3.0.3.jar lib
+ /spring-jdbc-3.0.3.jar lib/spring-oxm-3.0.3.jar lib/spring-test-3.0.3
+ .jar lib/spring-transaction-3.0.3.jar lib/struts.jar
+
+Name: common
+Implementation-Vendor: Codeprimate, LLC
+Implementation-Title: cp-tools
+Implementation-Version: 1.0.0.RELEASE
+

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+
+<classpaths>
+  <classpath pathid="runtime.classpath">
+    <pathelement path="${lib.dir}/commons-beanutils-1.8.3.jar"/>
+    <pathelement path="${lib.dir}/commons-collections-3.2.1.jar"/>
+    <pathelement path="${lib.dir}/commons-logging-1.1.1.jar"/>
+    <pathelement path="${lib.dir}/cp-common.jar"/>
+    <pathelement path="${lib.dir}/dom4j-1.6.1.jar"/>
+    <pathelement path="${lib.dir}/log4j-1.2.16.jar"/>
+    <pathelement path="${lib.dir}/poi-3.7.jar"/>
+    <pathelement path="${lib.dir}/servlet.jar"/>
+    <pathelement path="${lib.dir}/spring-aop-3.0.3.jar"/>
+    <pathelement path="${lib.dir}/spring-beans-3.0.3.jar"/>
+    <pathelement path="${lib.dir}/spring-context-3.0.3.jar"/>
+    <pathelement path="${lib.dir}/spring-context-support-3.0.3.jar"/>
+    <pathelement path="${lib.dir}/spring-core-3.0.3.jar"/>
+    <pathelement path="${lib.dir}/spring-jdbc-3.0.3.jar"/>
+    <pathelement path="${lib.dir}/spring-oxm-3.0.3.jar"/>
+    <pathelement path="${lib.dir}/spring-test-3.0.3.jar"/>
+    <pathelement path="${lib.dir}/spring-transaction-3.0.3.jar"/>
+    <pathelement path="${lib.dir}/struts.jar"/>
+  </classpath>
+</classpaths>

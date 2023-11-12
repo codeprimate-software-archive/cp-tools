@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+
+<project name="cp-tools" basedir="." default="help">
+
+  <!-- environment reference property -->
+  <property environment="env"/>
+
+  <!-- filesystem path properties -->
+  <property name="etc.dir" value="${basedir}/etc"/>
+  <property name="etc.config.dir" value="${etc.dir}/config"/>
+  <property name="lib.dir" value="${basedir}/lib"/>
+
+  <!-- file properties -->
+  <property name="classpath.properties.file" value="${etc.config.dir}/classpath.properties"/>
+  <property name="classpath.xml.file" value="${etc.config.dir}/classpath.xml"/>
+
+  <!-- resource properties -->
+  <property file="${classpath.properties.file}"/>
+  <xmlproperty file="${classpath.xml.file}" semanticAttributes="true"/>
+
+  <!-- launcher (Java) properties -->
+  <property name="java.fork" value="yes"/>
+  <property name="java.jvm" value="${global.was.dir}/java/jre/bin/java"/>
+
+  <!-- fully-qualified class names of Coderpimate tools -->
+  <property name="findclasspathresource.class.name" value="com.cp.tools.bin.FindClasspathResource"/>
+  <property name="loadclass.class.name" value="com.cp.tools.bin.LoadClass"/>
+
+  <path id="runtime.classpath">
+    <fileset dir="${lib.dir}">
+      <include name="**/*.jar"/>
+      <include name="**/*.zip"/>
+    </fileset>
+  </path>
+
+  <presetdef name="default.java">
+    <java fork="${java.fork}" jvm="${java.jvm}"/>
+  </presetdef>
+
+  <target name="run.findclasspathresource" description="Runs the LoadClasspathResource tool to find a resource in the classpath of a Java application!">
+    <default.java classname="${findclasspathresource.class.name}">
+      <!--classpath refid="${env.resource.classpath}"/-->
+      <!--arg value="${env.command.line.arguments}"/-->
+      <classpath>
+        <path refid="runtime.classpath"/>
+        <path refid="batch.runtime.classpath"/>
+      </classpath>
+      <arg value="junit/framework/TestCase.class"/>
+    </default.java>
+  </target>
+
+  <target name="run.loadclass" description="Runs the LoadClass tool to load a class from the classpath of the Java Application">
+    <default.java classname="${loadclass.class.name}">
+      <!--classpath refid="${env.resource.classpath}"/-->
+      <!--arg value="${env.command.line.arguments}"/-->
+      <classpath>
+        <path refid="runtime.classpath"/>
+        <path refid="batch.runtime.classpath"/>
+      </classpath>
+      <arg value="junit.framework.TestCase"/>
+    </default.java>
+  </target>
+
+  <target name="help" description="Displays help information for the Codeprimate cp-tools project Ant build file.">
+    <echo level="info">run.findclasspathresource  finds a resource in the classpath.</echo>
+    <echo level="info">run.loadclass              loads a class from the classpath.</echo>
+  </target>
+
+</project>

@@ -1,0 +1,18 @@
+QueryWriter Requirements Document
+
+* Provide a button to shrink SQL query results columns by field name.
+* Provide a button to shrink SQL query results columns by value.
+* Provide button displaying a form to display a single record from the table of results.
+* Configuration for SQL Parser to validate SQL statements.  Design using the AbstractFactory pattern to load SQL parser's specific to a database (i.e. Oracle).
+* Provide a configuration applet for language, connection preferrences, SQL statement execution (in thread, autocommit, etc).
+* Provide project management capabilities.
+* Provide colored reserved words.
+* Use of short-cut keys like in Idea for jumping to the hightlighted word (crtl-B or shift-mouse click).
+* Provide a database browser.  In table view, under columns, show the data in the table and when a user selects a column, have the table adjust it's view to show the data contained in that column of the table.
+* Include spelling chekcing capabilities.
+* In the SQL Window, provide the capability to edit/compile both SQL stored procedures/functions and regular SQL statements.
+* Add printing capabilities (in color for color printers).
+* Add functionality to show ER Diagram of database.
+* Add drag and drop capabilities.  If in project view, prompt the user to add the file to the project.
+* Add JavaHelp help set.
+* Have auto-save feature (run in a thread and save every 2 minutes; make configurable in the application properties dialog).

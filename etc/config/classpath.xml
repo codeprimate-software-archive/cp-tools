@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<classpaths>
+
+  <path id="batch.runtime.classpath">
+    <fileset dir="${global.was.jre.dir}">
+      <include name="**/*.jar"/>
+    </fileset>
+    <fileset dir="${global.was.lib.dir}">
+      <include name="**/*.jar"/>
+    </fileset>
+    <fileset dir="${global.was.plugins.dir}">
+      <include name="**/*.jar"/>
+    </fileset>
+
+    <dirset dir="${global.was.install.dir}/${global.client.deployed.ear}">
+      <include name="*.jar"/>
+    </dirset>
+    <fileset dir="${global.was.install.dir}/${global.client.deployed.ear}">
+      <include name="*.jar"/>
+    </fileset>
+
+    <pathelement location="/opt/app/oracle/product/10.2.0/jdbc/lib/ojdbc14.jar"/>
+    <pathelement location="${global.was.properties.dir}"/>
+  </path>
+
+</classpaths>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+
+<sqlloader-mapping>
+  <datasource name="flhk"
+              jdbcDriver="oracle.jdbc.driver.OracleDriver"
+              jdbcUrl="jdbc:oracle:thin:@ecomr01:1521:FHKDEV1"
+              jdbcUsername="flhk_rodan_blumj"
+              jdbcPassword="flhk_rodan_blumj">
+    <table name="stage_address" source="c:/Projects/MyProject/etc/tmp/testSqlLoaderData.csv">
+      <column name="stage_address_id" property="id" type="java.lang.Integer" startIndex="1" endIndex="3"/>
+      <column name="address_1" property="street1" type="java.lang.String" startIndex="4" endIndex="53"/>
+      <column name="address_2" property="street2" type="java.lang.String" startIndex="54" endIndex="79"/>
+      <column name="city" property="city" type="java.lang.String" startIndex="80" endIndex="99"/>
+      <column name="county" property="county" type="java.lang.String" startIndex="100" endIndex="119"/>
+      <column name="state" property="state" type="java.lang.String" startIndex="120" endIndex="121"/>
+      <column name="zip" property="zip" type="java.lang.String" startIndex="122" endIndex="126"/>
+      <column name="created_by" property="createdBy" type="java.lang.String" startIndex="127" endIndex="151"/>
+      <column name="created_date" property="createdDate" type="java.util.Calendar" startIndex="152" endIndex="176"/>
+      <column name="edited_by" property="editedBy" type="java.lang.String" startIndex="177" endIndex="201"/>
+      <column name="edited_date" property="editedDate" type="java.util.Calendar" startIndex="202" endIndex="226"/>
+    </table>
+  </datasource>
+</sqlloader-mapping>

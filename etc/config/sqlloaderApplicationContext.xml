@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+  <bean name="csvParser" class="com.codeprimate.tools.sqlloader.io.parser.support.CsvInputParser" scope="singleton" lazy-init="true"/>
+
+  <bean name="delegatingDataSource" class="com.codeprimate.tools.sqlloader.sql.support.DriverManagerDelegatingDataSource" scope="singleton"/>
+
+  <bean name="fixedWidthParser" class="com.codeprimate.tools.sqlloader.io.parser.support.FixedWidthInputParser" scope="singleton" lazy-init="true"/>
+
+  <bean name="inputParserFactory" class="com.codeprimate.tools.sqlloader.io.parser.InputParserFactory" scope="singleton"/>
+
+  <bean name="loaderDao" class="com.codeprimate.tools.sqlloader.dao.DefaultLoaderDao" scope="singleton">
+    <property name="dataSource" ref="delegatingDataSource"/>
+    <property name="sqlDialectFactory" ref="sqlDialectFactory"/>
+  </bean>
+
+  <bean name="mappingParser" class="com.codeprimate.tools.sqlloader.mapping.parser.DefaultMappingParser" scope="singleton"/>
+
+  <bean name="sqlDialectFactory" class="com.codeprimate.tools.sqlloader.sql.support.AnsiSqlDialectFactory" scope="singleton"/>
+
+  <bean name="xlsParser" class="com.codeprimate.tools.sqlloader.io.parser.support.XlsInputParser" scope="singleton" lazy-init="true"/>
+
+</beans>
